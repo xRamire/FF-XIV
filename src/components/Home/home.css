@@ -1,0 +1,20 @@
+.main-img {
+    width: 100%;
+    max-width: 850px;
+}
+.main-img img {
+    width: 100%;
+}
+.exp-card {
+    max-width: 450px;
+    transition: all 0.3s ease;
+}
+.exp-card img {
+    width: 100%;
+}
+.exp-card:hover {
+    cursor: pointer;
+}
+.exp-card:hover .exp-card img {
+    zoom: 150%;
+}
