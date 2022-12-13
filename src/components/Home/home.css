@@ -1,3 +1,24 @@
+.bg1 {
+    background-image: url(../../assets/img/sky.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0px;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+}
+.bg2 {
+    background-image: url(../../assets/img/dark-bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0px;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+}
+
 .main-img {
     width: 100%;
     max-width: 850px;
@@ -5,16 +26,109 @@
 .main-img img {
     width: 100%;
 }
-.exp-card {
+/* .exp-card {
     max-width: 450px;
-    transition: all 0.3s ease;
-}
+    transition: all 0.5s ease;
+} */
 .exp-card img {
     width: 100%;
 }
-.exp-card:hover {
+/* .exp-card:hover {
     cursor: pointer;
+    scale: 1.05;
+} */
+.txt h1 {
+    filter: drop-shadow(2px 4px 6px black);
 }
-.exp-card:hover .exp-card img {
-    zoom: 150%;
+
+
+
+
+/* tarjetas */
+
+.exp-card {
+    max-width: 450px;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    display: inline-block;
+    cursor: pointer;
+    scale: 1;
+    border-radius: 12px;
+}
+
+.exp-card-img {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    background-size: 105%;
+    background-position: center -7px;
+    border-radius: 12px;
+}
+
+.exp-card:hover .exp-card-img, .exp-card:focus .exp-card-img {
+    -ms-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.exp-card:hover .exp-card-img:before, .exp-card:focus .exp-card-img:before {
+    display: block;
+}
+
+.exp-card:hover a, .exp-card:focus a {
+    display: block;
+}
+
+.exp-card-img:before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.exp-card-img1 {
+    background-image: url(../../assets/img/realmreborn.png);
+}
+.exp-card-img2 {
+    background-image: url(../../assets/img/heavensward.png);
+}
+.exp-card-img3 {
+    background-image: url(../../assets/img/shadowbringers.png);
+}
+.exp-card-img4 {
+    background-image: url(../../assets/img/stormblood.png);
+}
+.exp-card-img5 {
+    background-image: url(../../assets/img/endwalker.png);
+}
+
+.card-space {
+    justify-content: space-around;
+    max-width: 950px;
+}
+/* tarjetas */
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .exp-card {
+        height: 80px;
+        width: 70%;
+        margin-top: 20px;
+    }
 }

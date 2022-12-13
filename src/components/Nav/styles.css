@@ -1,8 +1,10 @@
 nav {
     width: 100%;
+    position: fixed;
 }
 .nav-logo {
     width: 175px;
+    filter: drop-shadow(2px 4px 6px black);
 }
 .nav-content {
     width: 100%;
