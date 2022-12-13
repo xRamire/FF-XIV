@@ -8,6 +8,7 @@
     max-width: 100%;
     height: 100vh;
 }
+
 .bg2 {
     background-image: url(../../assets/img/dark-bg.jpeg);
     background-size: cover;
@@ -23,22 +24,25 @@
     width: 100%;
     max-width: 850px;
 }
+
 .main-img img {
     width: 100%;
 }
-/* .exp-card {
-    max-width: 450px;
-    transition: all 0.5s ease;
-} */
-.exp-card img {
-    width: 100%;
-}
-/* .exp-card:hover {
-    cursor: pointer;
-    scale: 1.05;
-} */
+
 .txt h1 {
     filter: drop-shadow(2px 4px 6px black);
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    scale: 1.2;
+}
+
+.arrow svg {
+    rotate: -90deg;
+    fill: linear-gradient(90deg, rgba(247, 121, 6, 1) 0%, rgba(0, 212, 255, 1) 35%, rgba(255, 255, 255, 1) 100%);
 }
 
 
@@ -73,7 +77,8 @@
     border-radius: 12px;
 }
 
-.exp-card:hover .exp-card-img, .exp-card:focus .exp-card-img {
+.exp-card:hover .exp-card-img,
+.exp-card:focus .exp-card-img {
     -ms-transform: scale(1.05);
     -moz-transform: scale(1.05);
     -webkit-transform: scale(1.05);
@@ -81,11 +86,13 @@
     transform: scale(1.05);
 }
 
-.exp-card:hover .exp-card-img:before, .exp-card:focus .exp-card-img:before {
+.exp-card:hover .exp-card-img:before,
+.exp-card:focus .exp-card-img:before {
     display: block;
 }
 
-.exp-card:hover a, .exp-card:focus a {
+.exp-card:hover a,
+.exp-card:focus a {
     display: block;
 }
 
@@ -102,15 +109,19 @@
 .exp-card-img1 {
     background-image: url(../../assets/img/realmreborn.png);
 }
+
 .exp-card-img2 {
     background-image: url(../../assets/img/heavensward.png);
 }
+
 .exp-card-img3 {
     background-image: url(../../assets/img/shadowbringers.png);
 }
+
 .exp-card-img4 {
     background-image: url(../../assets/img/stormblood.png);
 }
+
 .exp-card-img5 {
     background-image: url(../../assets/img/endwalker.png);
 }
@@ -119,6 +130,7 @@
     justify-content: space-around;
     max-width: 950px;
 }
+
 /* tarjetas */
 
 

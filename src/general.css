@@ -1,18 +1,27 @@
 * {
     color: #fff;
-    font-family: Crimson Text,ui-serif,Georgia,Cambria,Times New Roman,Times,serif;
+    font-family: Crimson Text, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
 }
+
 :root {
     --nav-height: auto
 }
+
 nav {
     height: var(--nav-height);
 }
+
 body {
     margin: 0px;
     padding: 0px;
     background-color: #000;
+    scroll-behavior: smooth;
 }
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .landing {
     min-height: calc(100vh - var(--nav-height));
 }
@@ -20,12 +29,14 @@ body {
 .container {
     width: 90%;
 }
+
 .row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
 }
+
 .column {
     display: flex;
     flex-direction: column;
@@ -36,6 +47,7 @@ body {
 .auto {
     margin: 0 auto;
 }
+
 .center {
     text-align: center;
 }
@@ -44,11 +56,11 @@ body {
     height: 1px;
     width: 100%;
     border-radius: 50px;
-    background: rgb(248,136,42);
+    background: rgb(248, 136, 42);
     /* background: repeating-linear-gradient(to right, rgba(248,136,42,1) 0%, rgba(255,255,255,1) 50%, rgba(248,136,42,1) 100%); */
-    
 
-    background: repeating-linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(248,136,42,1) 50%, rgba(255,255,255,1) 100%);
+
+    background: repeating-linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(248, 136, 42, 1) 50%, rgba(255, 255, 255, 1) 100%);
     /* background-size: 200% auto;
     background-position: 0 100%;
     animation: animate 5s infinite;
@@ -59,9 +71,14 @@ body {
     margin: 50px auto;
 }
 
-@keyframes animate{
-    0%   { background-position: 0 0; }
-    100% { background-position: -200% 0; }
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 
@@ -72,15 +89,19 @@ body {
 .padd-t-0 {
     padding-top: 0px;
 }
+
 .padd-t-25 {
     padding-top: 25px;
 }
+
 .padd-t-50 {
     padding-top: 50px;
 }
+
 .padd-t-75 {
     padding-top: 75px;
 }
+
 .padd-t-100 {
     padding-top: 100px;
 }
@@ -88,15 +109,19 @@ body {
 .padd-b-0 {
     padding-bottom: 0px;
 }
+
 .padd-b-25 {
     padding-bottom: 25px;
 }
+
 .padd-b-50 {
     padding-bottom: 50px;
 }
+
 .padd-b-75 {
     padding-bottom: 75px;
 }
+
 .padd-b-100 {
     padding-bottom: 100px;
 }
@@ -114,34 +139,43 @@ body {
     .padd-m-0 {
         padding: 0px;
     }
+
     .padd-m-t-0 {
         padding-top: 0px;
     }
+
     .padd-m-t-25 {
         padding-top: 25px;
     }
+
     .padd-m-t-50 {
         padding-top: 50px;
     }
+
     .padd-m-t-75 {
         padding-top: 75px;
     }
+
     .padd-m-t-100 {
         padding-top: 100px;
     }
-    
+
     .padd-m-b-0 {
         padding-bottom: 0px;
     }
+
     .padd-m-b-25 {
         padding-bottom: 25px;
     }
+
     .padd-m-b-50 {
         padding-bottom: 50px;
     }
+
     .padd-m-b-75 {
         padding-bottom: 75px;
     }
+
     .padd-m-b-100 {
         padding-bottom: 100px;
     }
