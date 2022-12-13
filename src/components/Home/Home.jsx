@@ -3,6 +3,16 @@ import './home.css';
 import MainImg from '../../assets/img/Final-Fantasy-XIV-home-Logo.png';
 
 function Home(props) {
+
+
+    const handleClickScroll = () => {
+        const element = document.getElementById('expansions');
+        if (element) {
+            // 👇 Will scroll smoothly to the top of the next section
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div id="Home" className='landing'>
             <div className="container auto bg1">
@@ -13,16 +23,16 @@ function Home(props) {
                     <div className='txt center'>
                         <h1>Adventure awaits you beyond the horizon</h1>
                     </div>
-                    <div class="arrow auto">
+                    <div onClick={handleClickScroll} class="arrow auto">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><polygon points="13.707 4.707 12.293 3.293 3.586 12 12.293 20.707 13.707 19.293 6.414 12 13.707 4.707" /><polygon points="19.707 4.707 18.293 3.293 9.586 12 18.293 20.707 19.707 19.293 12.414 12 19.707 4.707" /></g></svg>
                     </div>
                 </div>
 
             </div>
 
-            <div className="container auto bg2">
+            <div className="container auto bg2" id='expansions'>
                 <div className="content verticalalign">
-                    <div className="expansions column verticalalign">
+                    <div className="column verticalalign">
                         <div className="row card-space auto padd-m-t-50">
                             <div className=" exp-card"><div className="exp-card-img exp-card-img1"></div></div>
                             <div className=" exp-card"><div className="exp-card-img exp-card-img2"></div></div>

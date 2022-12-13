@@ -33,22 +33,46 @@
     filter: drop-shadow(2px 4px 6px black);
 }
 
+
+
+/* arrow start */
+
 .arrow {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 55px;
     scale: 1.2;
+    width: fit-content;
+    transform: translatey(0px);
+    animation: float 4s ease-in-out infinite;
+    cursor: pointer;
 }
 
 .arrow svg {
     rotate: -90deg;
-    fill: linear-gradient(90deg, rgba(247, 121, 6, 1) 0%, rgba(0, 212, 255, 1) 35%, rgba(255, 255, 255, 1) 100%);
+    filter: blur(0.8px) invert(1);
 }
 
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+
+        transform: translatey(-10px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+/* arrow end */
 
 
 
-/* tarjetas */
+/* cards start */
 
 .exp-card {
     max-width: 450px;
@@ -131,7 +155,7 @@
     max-width: 950px;
 }
 
-/* tarjetas */
+/* cards end */
 
 
 
