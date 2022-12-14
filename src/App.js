@@ -9,6 +9,7 @@ import { House } from "./components/House/House";
 import { OrbitControls, Sky } from "@react-three/drei";
 import Nav from "./components/Nav/Nav";
 import AnimatedRoutes from "./components/AnimatedRoutes";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Audio
 
@@ -30,6 +31,7 @@ function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Nav />
         <AnimatedRoutes />
       </Router>

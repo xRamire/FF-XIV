@@ -9,6 +9,8 @@ function AnimatedRoutes() {
 
     const location = useLocation();
 
+    
+
     return (
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>

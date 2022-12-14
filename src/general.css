@@ -32,6 +32,10 @@ img {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 .landing {
     min-height: calc(100vh - var(--nav-height));
 }

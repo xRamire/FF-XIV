@@ -3,7 +3,8 @@ import { motion } from "framer-motion"
 import './expansions.css';
 
 import MainImg from '../../assets/img/realmreborn-logo.png';
-import ParticleBackground from 'react-particle-backgrounds'
+import StoryImg from '../../assets/img/rr-story-1.png'
+import ParticleBackground from 'react-particle-backgrounds';
 
 
 const RealmReborn = () => {
@@ -35,6 +36,15 @@ const RealmReborn = () => {
     }
 
 
+    const scrollToStory = () => {
+        const element = document.getElementById('story');
+        if (element) {
+            // 👇 Will scroll smoothly to the top of the next section
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+
 
     return (
         <motion.div id='realmReborn' className='landing relative'
@@ -51,9 +61,27 @@ const RealmReborn = () => {
                         <img src={MainImg} alt="Final Fantasy" />
                     </div>
                     <div className='txt center categories padd-t-50'>
-                        <div className='category-btn'><h2>Story</h2></div>
+                        <div onClick={scrollToStory} className='category-btn'><h2>Story</h2></div>
                         <div className='category-btn'><h2>Locations</h2></div>
                         <div className='category-btn'><h2>Races</h2></div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="container auto bg2" id='story'>
+                <div className="content story auto">
+                    <article className='story-article padd-m-t-25'>
+                        <h3>The Crystal's Call</h3>
+                        <p>
+                            Hydaelyn─a vibrant planet blessed by the Light of the Crystal.
+                            <br /> <br />
+                            Amid azure seas, encompassing the westernmost of the Three Great Continents, there lies a realm embraced by gods and forged by heroes. Her name...Eorzea.
+                            <br /> <br />
+                            It is here that your tale unfolds. Beckoned by the Mothercrystal─the source of all life─you must embark upon a quest to deliver the land from an eternity of Darkness.
+                        </p>
+                    </article>
+                    <div className="story-img">
+                        <img src={StoryImg} alt="crystal call" />
                     </div>
                 </div>
             </div>
