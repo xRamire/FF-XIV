@@ -22,7 +22,7 @@
 
 .main-img {
     width: 100%;
-    max-width: 850px;
+    max-width: 650px;
 }
 
 .main-img img {
@@ -139,11 +139,11 @@
 }
 
 .exp-card-img3 {
-    background-image: url(../../assets/img/shadowbringers.png);
+    background-image: url(../../assets/img/stormblood.png);
 }
 
 .exp-card-img4 {
-    background-image: url(../../assets/img/stormblood.png);
+    background-image: url(../../assets/img/shadowbringers.png);
 }
 
 .exp-card-img5 {
@@ -158,6 +158,20 @@
 /* cards end */
 
 
+.video-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
 
 
 

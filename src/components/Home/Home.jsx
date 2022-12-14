@@ -16,8 +16,8 @@ function Home(props) {
     return (
         <div id="Home" className='landing'>
             <div className="container auto bg1">
-                <div className="content padd-t-100">
-                    <div class="main-img auto">
+                <div className="content">
+                    <div class="main-img auto padd-t-100">
                         <img src={MainImg} alt="Final Fantasy" />
                     </div>
                     <div className='txt center'>

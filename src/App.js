@@ -8,6 +8,7 @@ import { OrbitControls, Sky } from "@react-three/drei";
 import BgSound from "./components/Sound/BgSound";
 import Nav from "./components/Nav/Nav";
 import Home from "./components/Home/Home";
+import RealmReborn from "./components/Expansions/RealmReborn";
 
 // Audio
 
@@ -23,16 +24,17 @@ function App() {
   //     .then(response => response.json())
   //     .then(data => console.info(data))
   // })
-  
-  
 
 
-  
+
+
+
   return (
     <>
       <Nav />
-      <Home />
-      
+      {/* <Home /> */}
+      <RealmReborn />
+
       {/* <div style={{width: '100%', height: '80vh'} }>
         <Canvas camera={{ zoom: 1, position:[10, 10, 15] }} ref={cameraRef}>
           <ambientLight intensity={0.5}/>

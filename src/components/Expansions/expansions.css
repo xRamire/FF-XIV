@@ -1,0 +1,11 @@
+.main-img {
+    width: 100%;
+    max-width: 425px;
+}
+
+.particles {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
