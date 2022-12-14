@@ -1,4 +1,4 @@
-.bg1 {
+#home .bg1 {
     background-image: url(../../assets/img/sky.jpeg);
     background-size: cover;
     background-position: center;
@@ -9,7 +9,7 @@
     height: 100vh;
 }
 
-.bg2 {
+#home .bg2 {
     background-image: url(../../assets/img/dark-bg.jpeg);
     background-size: cover;
     background-position: center;
@@ -20,16 +20,16 @@
     height: 100vh;
 }
 
-.main-img {
+#home .main-img {
     width: 100%;
     max-width: 650px;
 }
 
-.main-img img {
+#home .main-img img {
     width: 100%;
 }
 
-.txt h1 {
+#home .txt h1 {
     filter: drop-shadow(2px 4px 6px black);
 }
 

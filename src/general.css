@@ -28,6 +28,10 @@ body::-webkit-scrollbar {
     /* Chrome */
 }
 
+img {
+    width: 100%;
+}
+
 .landing {
     min-height: calc(100vh - var(--nav-height));
 }
@@ -136,6 +140,10 @@ body::-webkit-scrollbar {
     height: 100%;
     justify-content: center;
     vertical-align: middle;
+}
+
+.relative {
+    position: relative;
 }
 
 
