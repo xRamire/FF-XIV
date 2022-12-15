@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import './expansions.css';
 
 import MainImg from '../../assets/img/realmreborn-logo.png';
-import StoryImg from '../../assets/img/rr-story-1.png'
+
 import ParticleBackground from 'react-particle-backgrounds';
+import RealmRebornStory1 from './RealmReborn/RealmRebornStory1';
+import RealmRebornStory4 from './RealmReborn/RealmRebornStory4';
+import RealmRebornStory3 from './RealmReborn/RealmRebornStory3';
+import RealmRebornStory2 from './RealmReborn/RealmRebornStory2';
 
 
 const RealmReborn = () => {
@@ -46,7 +50,7 @@ const RealmReborn = () => {
 
     // story animations
 
-    const [currentStory, setCurrentStory] = useState(0)
+    const [currentStory, setCurrentStory] = useState(0);
 
 
 
@@ -77,23 +81,12 @@ const RealmReborn = () => {
                     <div className="carrousel-btn carrousel-btn-1" onClick={() => currentStory === 0 ? null : setCurrentStory(currentStory - 1)} style={currentStory === 0 ? { opacity: "0.5" } : { opacity: "1" }}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><polygon points="13.707 4.707 12.293 3.293 3.586 12 12.293 20.707 13.707 19.293 6.414 12 13.707 4.707" /><polygon points="19.707 4.707 18.293 3.293 9.586 12 18.293 20.707 19.707 19.293 12.414 12 19.707 4.707" /></g></svg>
                     </div>
-                    <motion.article
-                        animate={{ opacity: currentStory > 0 ? 0 : 1, transition: { duration: 0.5 } }}
-                        className='story-article padd-m-t-25'>
-                        <h3>The Crystal's Call</h3>
-                        <p>
-                            Hydaelyn─a vibrant planet blessed by the Light of the Crystal.
-                            <br /> <br />
-                            Amid azure seas, encompassing the westernmost of the Three Great Continents, there lies a realm embraced by gods and forged by heroes. Her name...Eorzea.
-                            <br /> <br />
-                            It is here that your tale unfolds. Beckoned by the Mothercrystal─the source of all life─you must embark upon a quest to deliver the land from an eternity of Darkness.
-                        </p>
-                    </motion.article>
-                    <motion.div className="story-img"
-                        animate={{ opacity: currentStory > 0 ? 0 : 1, transition: { duration: 0.5 } }}>
-                        <img src={StoryImg} alt="crystal call" />
-                    </motion.div>
-                    <div className="carrousel-btn carrousel-btn-2" onClick={() => setCurrentStory(currentStory + 1)}>
+                    {currentStory === 0 ? <RealmRebornStory1 /> : null}
+                    {currentStory === 1 ? <RealmRebornStory2 /> : null}
+                    {currentStory === 2 ? <RealmRebornStory3 /> : null}
+                    {currentStory === 3 ? <RealmRebornStory4 /> : null}
+
+                    <div className="carrousel-btn carrousel-btn-2" onClick={() => currentStory === 4 ? null : setCurrentStory(currentStory + 1)} style={currentStory === 4 ? { opacity: "0.5" } : { opacity: "1" }} storyImgCheck>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><polygon points="13.707 4.707 12.293 3.293 3.586 12 12.293 20.707 13.707 19.293 6.414 12 13.707 4.707" /><polygon points="19.707 4.707 18.293 3.293 9.586 12 18.293 20.707 19.707 19.293 12.414 12 19.707 4.707" /></g></svg>
                     </div>
                 </div>
