@@ -9,13 +9,13 @@ function AnimatedRoutes() {
 
     const location = useLocation();
 
-    
+
 
     return (
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Home />} />
-                <Route path="/realmReborn" element={<RealmReborn />} />
+                <Route path="/realm-reborn" element={<RealmReborn />} />
             </Routes>
         </AnimatePresence>
     )

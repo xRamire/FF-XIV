@@ -79,6 +79,15 @@
     width: 300px;
 }
 
+.carrousel-btn {
+    fill: #fff;
+    cursor: pointer;
+}
+
+.carrousel-btn-2 {
+    rotate: 180deg;
+}
+
 
 @media only screen and (max-width: 600px) {
     .story {

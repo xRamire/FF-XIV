@@ -42,7 +42,7 @@ function Home(props) {
                 <div className="content verticalalign">
                     <div className="column verticalalign">
                         <div className="row card-space auto padd-m-t-50">
-                            <Link to='/realmReborn' className='exp-card'><div className="exp-card-img exp-card-img1"></div></Link>
+                            <Link to='/realm-reborn' className='exp-card'><div className="exp-card-img exp-card-img1"></div></Link>
                             <div className=" exp-card"><div className="exp-card-img exp-card-img2"></div></div>
                         </div>
                         <div className="row card-space auto padd-t-50 padd-m-t-0">
