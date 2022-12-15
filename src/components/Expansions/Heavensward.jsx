@@ -1,45 +1,13 @@
 import React, { useState } from 'react';
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import './expansions.css';
 
-import MainImg from '../../assets/img/realmreborn-logo.png';
-
-import ParticleBackground from 'react-particle-backgrounds';
-import RealmRebornStory1 from './RealmReborn/Story/RealmRebornStory1';
-import RealmRebornStory4 from './RealmReborn/Story/RealmRebornStory4';
-import RealmRebornStory3 from './RealmReborn/Story/RealmRebornStory3';
-import RealmRebornStory2 from './RealmReborn/Story/RealmRebornStory2';
-
-import { AnimatePresence } from 'framer-motion';
+import MainImg from '../../assets/img/heavensward-logo.png';
+import HeavenswardStory1 from './Heavensward/HeavenswardStory1';
 
 
-const RealmReborn = () => {
+const Heavensward = () => {
 
-    const settings = {
-        canvas: {
-            canvasFillSpace: true,
-            width: 200,
-            height: 200,
-            useBouncyWalls: false,
-        },
-        particle: {
-            particleCount: 50,
-            color: '#fff',
-            minSize: 3,
-            maxSize: 6
-        },
-        velocity: {
-            directionAngle: 0,
-            directionAngleVariance: 360,
-            minSpeed: 1,
-            maxSpeed: 3
-        },
-        opacity: {
-            minOpacity: 0,
-            maxOpacity: 0.8,
-            opacityTransitionTime: 15000
-        }
-    }
 
 
     const scrollToStory = () => {
@@ -54,21 +22,18 @@ const RealmReborn = () => {
 
     const [currentStory, setCurrentStory] = useState(1);
 
-    const storyPosts = 4
+    const storyPosts = 1
 
 
 
     return (
-        <motion.div id='expansion-component' className='landing relative exp-realmreborn'
+        <motion.div id='expansion-component' className='landing relative exp-heavensward'
             initial={{ opacity: 0, transition: { duration: 0.5 } }}
             animate={{ opacity: 1, transition: { duration: 1 } }}
             exit={{ opacity: 0, transition: { duration: 0.3 } }}>
 
             <div className="container auto bg1">
                 <div className="content">
-                    <div className="particles">
-                        <ParticleBackground settings={settings} />
-                    </div>
                     <div class="main-img auto padd-t-100">
                         <img src={MainImg} alt="Final Fantasy" />
                     </div>
@@ -86,10 +51,7 @@ const RealmReborn = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><polygon points="13.707 4.707 12.293 3.293 3.586 12 12.293 20.707 13.707 19.293 6.414 12 13.707 4.707" /><polygon points="19.707 4.707 18.293 3.293 9.586 12 18.293 20.707 19.707 19.293 12.414 12 19.707 4.707" /></g></svg>
                     </div>
                     <AnimatePresence>
-                        {currentStory === 1 ? <RealmRebornStory1 /> : null}
-                        {currentStory === 2 ? <RealmRebornStory2 /> : null}
-                        {currentStory === 3 ? <RealmRebornStory3 /> : null}
-                        {currentStory === 4 ? <RealmRebornStory4 /> : null}
+                        {currentStory === 1 ? <HeavenswardStory1 /> : null}
                     </AnimatePresence>
 
 
@@ -112,4 +74,4 @@ const RealmReborn = () => {
     );
 }
 
-export default RealmReborn;
+export default Heavensward;

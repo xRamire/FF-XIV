@@ -1,26 +1,24 @@
-#realmReborn .main-img {
+#expansion-component .main-img {
     width: 100%;
     max-width: 425px;
 }
 
-#realmReborn .particles {
+#expansion-component .particles {
     position: absolute;
     width: 100%;
     height: 99%;
     z-index: -1;
 }
 
-#realmReborn .bg1 {
+#expansion-component .bg1 {
     padding: 0px;
     width: 100%;
     max-width: 100%;
     height: 100vh;
 
-    background: rgb(3, 2, 100);
-    background: linear-gradient(45deg, rgba(0, 46, 130, .525) 0%, rgba(0, 133, 173, 0.525) 50%, rgba(0, 46, 130, .525) 100%);
 }
 
-#realmReborn .bg2 {
+#expansion-component .bg2 {
     background-image: url(../../assets/img/dark-bg.jpeg);
     background-size: cover;
     background-position: center;
@@ -31,7 +29,7 @@
     height: 100vh;
 }
 
-#realmReborn .txt.categories {
+#expansion-component .txt.categories {
     display: flex;
     max-width: 800px;
     justify-content: space-evenly;
@@ -39,7 +37,7 @@
     filter: drop-shadow(2px 4px 6px black);
 }
 
-#realmReborn .category-btn {
+#expansion-component .category-btn {
     display: inline-block;
     padding-bottom: 2px;
     background-image: linear-gradient(#fff 0 0);
@@ -53,12 +51,12 @@
 
 }
 
-#realmReborn .category-btn:hover {
+#expansion-component .category-btn:hover {
     background-position: 100% 100%;
     background-size: 100% 2px;
 }
 
-#realmReborn .category-btn h2 {
+#expansion-component .category-btn h2 {
     margin: 0px;
 }
 
@@ -73,6 +71,26 @@
 
 .story-article {
     max-width: 550px;
+}
+
+.story-article p {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.story-article p::-webkit-scrollbar {
+    width: 3px;
+}
+
+.story-article p::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.story-article p::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
 }
 
 .story-img {
@@ -96,9 +114,41 @@
     align-items: center;
 }
 
+.carrousel-btn-mob {
+    display: none;
+}
+
+
+/* CUSTOM - EXPANSION */
+#expansion-component.exp-realmreborn .bg1 {
+    background: rgb(3, 2, 100);
+    background: linear-gradient(45deg, rgba(0, 46, 130, .425) 0%, rgba(0, 133, 173, 0.725) 50%, rgba(0, 46, 130, .425) 100%);
+}
+
+/* CUSTOM - EXPANSION */
+
 
 @media only screen and (max-width: 600px) {
+
     .story {
         flex-direction: column;
     }
+
+    .storyComponent {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .story-img {
+        display: none;
+    }
+
+    .carrousel-btn-mob {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        padding-bottom: 25px;
+    }
+
+
 }

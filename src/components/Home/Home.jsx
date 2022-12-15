@@ -43,7 +43,7 @@ function Home(props) {
                     <div className="column verticalalign">
                         <div className="row card-space auto padd-m-t-50">
                             <Link to='/realm-reborn' className='exp-card'><div className="exp-card-img exp-card-img1"></div></Link>
-                            <div className=" exp-card"><div className="exp-card-img exp-card-img2"></div></div>
+                            <Link to='/heavensward' className=" exp-card"><div className="exp-card-img exp-card-img2"></div></Link>
                         </div>
                         <div className="row card-space auto padd-t-50 padd-m-t-0">
                             <div className="auto exp-card"><div className="exp-card-img exp-card-img3"></div></div>

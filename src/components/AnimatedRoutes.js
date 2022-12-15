@@ -4,6 +4,7 @@ import RealmReborn from './Expansions/RealmReborn';
 import Home from './Home/Home';
 
 import { AnimatePresence } from 'framer-motion';
+import Heavensward from './Expansions/Heavensward';
 
 function AnimatedRoutes() {
 
@@ -16,6 +17,7 @@ function AnimatedRoutes() {
             <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Home />} />
                 <Route path="/realm-reborn" element={<RealmReborn />} />
+                <Route path="/heavensward" element={<Heavensward />} />
             </Routes>
         </AnimatePresence>
     )

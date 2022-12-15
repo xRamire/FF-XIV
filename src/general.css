@@ -150,6 +150,13 @@ a {
     position: relative;
 }
 
+.nodesk {
+    display: none;
+}
+
+.nomob {
+    display: block;
+}
 
 
 
@@ -196,5 +203,13 @@ a {
 
     .padd-m-b-100 {
         padding-bottom: 100px;
+    }
+
+    .nodesk {
+        display: block;
+    }
+
+    .nomob {
+        display: none;
     }
 }
