@@ -29,8 +29,10 @@ const RealmReborn = () => {
             maxSize: 6
         },
         velocity: {
+            // directionAngle: 90,
+            // directionAngleVariance: 360,
             directionAngle: 0,
-            directionAngleVariance: 360,
+            directionAngleVariance: 0,
             minSpeed: 1,
             maxSpeed: 3
         },
@@ -59,7 +61,7 @@ const RealmReborn = () => {
 
 
     return (
-        <motion.div id='expansion-component' className='landing relative exp-realmreborn'
+        <motion.div id='expansion-component' className='landing relative exp-realmreborn bg0'
             initial={{ opacity: 0, transition: { duration: 0.5 } }}
             animate={{ opacity: 1, transition: { duration: 1 } }}
             exit={{ opacity: 0, transition: { duration: 0.3 } }}>
