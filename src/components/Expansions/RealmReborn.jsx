@@ -33,8 +33,8 @@ const RealmReborn = () => {
             // directionAngleVariance: 360,
             directionAngle: 0,
             directionAngleVariance: 0,
-            minSpeed: 1,
-            maxSpeed: 3
+            minSpeed: 0.2,
+            maxSpeed: 0.5
         },
         opacity: {
             minOpacity: 0,

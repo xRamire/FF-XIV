@@ -81,7 +81,7 @@ function Nav(props) {
                             </svg>
                         </div>
                     </Link>
-                    {/* <BgSound /> */}
+                    <BgSound />
                 </div>
             </div>
         </nav>
