@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from "framer-motion";
 import './expansions.css';
 
@@ -45,11 +45,12 @@ const RealmReborn = () => {
 
 
     const scrollToStory = () => {
-        const element = document.getElementById('story');
-        if (element) {
-            // 👇 Will scroll smoothly to the top of the next section
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
+        // const element = document.getElementById('story');
+        // if (element) {
+        //     // 👇 Will scroll smoothly to the top of the next section
+        //     element.scrollIntoView({ behavior: 'smooth' });
+        // }
+
     };
 
     // story animations
@@ -58,6 +59,8 @@ const RealmReborn = () => {
 
     const storyPosts = 4
 
+
+    const [showStory, setShowStory] = useState(false)
 
 
     return (
@@ -71,19 +74,22 @@ const RealmReborn = () => {
                     <div className="particles">
                         <ParticleBackground settings={settings} />
                     </div>
-                    <div class="main-img auto padd-t-100">
+                    <motion.div animate={{ opacity: showStory ? 0 : 1, transition: { duration: 0.5 } }} class="main-img auto padd-t-100">
                         <img src={MainImg} alt="Final Fantasy" />
-                    </div>
-                    <div className='txt center categories padd-t-50'>
-                        <div onClick={scrollToStory} className='category-btn'><h2>Story</h2></div>
+                    </motion.div>
+                    <motion.div
+                        animate={{ y: showStory ? '-350px' : 0, transition: { duration: 1 } }}
+                        className='txt center categories padd-t-50'>
+                        <div onClick={() => setShowStory(!showStory)} className='category-btn'><h2>Story</h2></div>
                         <div className='category-btn'><h2>Locations</h2></div>
                         <div className='category-btn'><h2>Races</h2></div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
             <motion.div
-                animate={{ y: 0, transition: { duration: 1 } }}
+                initial={{ y: '+100%', zIndex: -1, transition: { duration: 0 } }}
+                animate={{ y: showStory ? '0' : '+100%', transition: { duration: 1 } }}
                 className="container auto bg2" id='story'>
                 <div className="content story auto">
                     <div className="nomob carrousel-btn carrousel-btn-1" onClick={() => currentStory === 1 ? null : setCurrentStory(currentStory - 1)} style={currentStory === 1 ? { opacity: "0.5" } : { opacity: "1" }}>
