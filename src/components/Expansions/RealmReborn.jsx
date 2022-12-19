@@ -82,7 +82,9 @@ const RealmReborn = () => {
                 </div>
             </div>
 
-            <div className="container auto bg2" id='story'>
+            <motion.div
+                animate={{ y: 0, transition: { duration: 1 } }}
+                className="container auto bg2" id='story'>
                 <div className="content story auto">
                     <div className="nomob carrousel-btn carrousel-btn-1" onClick={() => currentStory === 1 ? null : setCurrentStory(currentStory - 1)} style={currentStory === 1 ? { opacity: "0.5" } : { opacity: "1" }}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><polygon points="13.707 4.707 12.293 3.293 3.586 12 12.293 20.707 13.707 19.293 6.414 12 13.707 4.707" /><polygon points="19.707 4.707 18.293 3.293 9.586 12 18.293 20.707 19.707 19.293 12.414 12 19.707 4.707" /></g></svg>
@@ -109,7 +111,7 @@ const RealmReborn = () => {
                     </div>
 
                 </div>
-            </div>
+            </motion.div>
         </motion.div>
     );
 }
