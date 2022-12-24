@@ -31,7 +31,10 @@
     max-width: 100%;
     position: absolute;
     left: 0;
-    bottom: 17%;
+    bottom: 27%;
+
+    max-height: 40vh;
+    height: 100%;
 
     display: flex;
     align-items: center;
@@ -72,17 +75,16 @@
 }
 
 .story {
-    max-width: 90%;
+    max-width: 80vw;
+    width: 90%;
+
     display: flex;
     height: 100%;
     align-items: center;
     vertical-align: middle;
     justify-content: space-evenly;
 
-
-    height: 430px;
     border-radius: 50px;
-    width: 90%;
     padding: 45px 25px;
     background: url(../../assets/img/dark-bg.jpeg);
     background-position: center;
@@ -92,13 +94,16 @@
 
 .story-article {
     max-width: 550px;
+    max-height: 50vh;
+    height: 100%;
 }
 
 .story-article p {
-    max-height: 400px;
+    max-height: 40vh;
+    height: 100%;
     overflow-y: auto;
     padding-right: 20px;
-    padding-bottom: 10px;
+
 }
 
 .story-article p::-webkit-scrollbar {
@@ -127,6 +132,10 @@
     rotate: 180deg;
 }
 
+.carrousel-btn svg {
+    transition: all 0.3s ease;
+}
+
 .storyComponent {
     width: 100%;
     display: flex;
@@ -138,6 +147,10 @@
 
 .carrousel-btn-mob {
     display: none;
+}
+
+.fillButton:hover {
+    fill: #0083ab;
 }
 
 
