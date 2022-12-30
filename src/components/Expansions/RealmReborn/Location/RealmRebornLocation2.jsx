@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../expansions.css';
-import LocationImg from '../../../../assets/img/locations/rr-location-1.png';
+import LocationImg from '../../../../assets/img/locations/rr-location-2.png';
 import { motion } from "framer-motion";
 
-const RealmRebornLocation1 = ({ setKey }) => {
+const RealmRebornLocation2 = ({ setKey }) => {
     return (
         <motion.div className='contentComponent'
             key={setKey}
@@ -12,9 +12,9 @@ const RealmRebornLocation1 = ({ setKey }) => {
             exit={{ display: 'none', opacity: 0, transition: { duration: 0.3 } }}
         >
             <article className='content-article padd-m-t-25'>
-                <h3>UL'DAH</h3>
+                <h3>GRIDANIA</h3>
                 <p>
-                    The bustling commercial hub of Ul'dah sits amid the desolate desert landscape of southern Aldenard. The city is organized strategically around the dome-shaped citadel at its center. Its towering fortifications and protective outer walls are visible for malms in all directions, and serve as a stark deterrent to would-be besiegers.
+                    In the eastern reaches of the Aldenard landmass, home to vast, dense woodlands and coursing rivers, lies the forest nation of Gridania. The cityscape is a mosaic of labyrinthine waterways and great wooden structures, so gracefully constructed they seem a part of the surrounding environment.
                     <br /><br />
                     Visitors from every corner of Eorzea come to Ul'dah to partake of the city's famed recreation, most notably the fighting arenas and gambling halls. Ul'dahn culture is known for its affluence, and the wealth of the nation comes in large part from its abundant mineral resources and prestigious clothcrafting industry.
                     <br /><br />
@@ -26,4 +26,4 @@ const RealmRebornLocation1 = ({ setKey }) => {
     );
 }
 
-export default RealmRebornLocation1;
+export default RealmRebornLocation2;

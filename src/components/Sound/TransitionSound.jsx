@@ -11,7 +11,7 @@ function TransitionSound({ handleSongLoading, handleSongPlaying, handleSongFinis
 
         <Sound
             url={PreludeDiscoveries}
-            volume={50}
+            volume={40}
             playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.STOPPED}
             onLoading={handleSongLoading}
             onPlaying={handleSongPlaying}

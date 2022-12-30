@@ -90,15 +90,30 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    filter: drop-shadow(2px 4px 6px black);
 }
 
-.story-article {
+.story-races {
+    max-width: 80vw;
+    width: 90%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    background-color: #fff;
+}
+
+.content-article {
     max-width: 550px;
     max-height: 50vh;
     height: 100%;
 }
 
-.story-article p {
+
+
+.content-article p {
     max-height: 40vh;
     height: 100%;
     overflow-y: auto;
@@ -106,20 +121,20 @@
 
 }
 
-.story-article p::-webkit-scrollbar {
+.content-article p::-webkit-scrollbar {
     width: 3px;
 }
 
-.story-article p::-webkit-scrollbar-track {
+.content-article p::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-.story-article p::-webkit-scrollbar-thumb {
+.content-article p::-webkit-scrollbar-thumb {
     background-color: darkgrey;
     outline: 1px solid slategrey;
 }
 
-.story-img {
+.content-article-img {
     width: 300px;
 }
 
@@ -129,14 +144,15 @@
 }
 
 .carrousel-btn-2 {
-    rotate: 180deg;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 .carrousel-btn svg {
     transition: all 0.3s ease;
 }
 
-.storyComponent {
+.contentComponent {
     width: 100%;
     display: flex;
     margin: 0px auto;
@@ -158,6 +174,7 @@
 #expansion-component.exp-realmreborn.bg0 {
     background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 133, 173, 1) 50%, rgb(0, 0, 0) 100%);
 }
+
 
 /* CUSTOM - EXPANSION */
 

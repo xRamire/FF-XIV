@@ -97,7 +97,7 @@ a {
 
 
 .padd-0 {
-    padding: 0px;
+    padding: 0px !important;
 }
 
 .padd-t-0 {

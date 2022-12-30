@@ -1,0 +1,112 @@
+#expansion-component .content-article .race-name {
+    filter: drop-shadow(2px 4px 6px #000);
+    margin-top: 0;
+}
+
+#expansion-component .content-article .race-types {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    max-width: 99vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#expansion-component .content-article .race-types .race-types-names {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#expansion-component .content-article .race-types .race-types-names h3 {
+    margin: 0 15px;
+    cursor: pointer;
+    filter: drop-shadow(2px 4px 6px #000);
+}
+
+#expansion-component #races.bg2 {
+    max-height: 80vh;
+    bottom: -7%;
+    height: 100%;
+}
+
+#expansion-component .content-article.race-article {
+    max-width: 95%;
+    max-height: initial;
+}
+
+#expansion-component .content-article.race-article p {
+    max-width: initial;
+    max-height: initial;
+}
+
+#expansion-component .race-types-content {
+    display: flex;
+    max-height: 44vh;
+    height: 44vh
+}
+
+#expansion-component .race-types-content>div {
+    width: 33%;
+    position: relative;
+}
+
+#expansion-component .race-types-content .race-img img {
+    width: 15vh;
+    position: absolute;
+}
+
+.race-img .img1 {
+    top: -7%;
+    left: 25%;
+}
+
+.race-img .img2 {
+    top: 5%;
+    left: 45%;
+}
+
+.race-img2 .img1 {
+    scale: 0.9;
+}
+
+.race-img2 .img2 {
+    scale: 1.1;
+}
+
+#expansion-component .story-races {
+    align-items: initial;
+}
+
+.race-type-text {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.race-type-text p {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 5%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.races-component {
+    position: absolute;
+    background: url(../../../../assets/img/dark-bg.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 45px 25px;
+    border-radius: 50px;
+    filter: none
+}
+
+.drop-shadow {
+    filter: drop-shadow(2px 4px 6px black);
+}
