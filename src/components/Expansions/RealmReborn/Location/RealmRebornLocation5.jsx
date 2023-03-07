@@ -11,7 +11,7 @@ const RealmRebornLocation5 = ({ setKey }) => {
             animate={{ opacity: 1, transition: { duration: 1 } }}
             exit={{ display: 'none', opacity: 0, transition: { duration: 0.3 } }}
         >
-            <article className='content-article padd-m-t-25'>
+            <article className='content-article'>
                 <h3>ALA MHIGO</h3>
                 <p>
                     The highlands of Gyr Abania in the eastern reaches of Aldenard were once under the control of a martial nation known as Ala Mhigo. It was, perhaps, the historically conflicted nature of the territory that forged the country into a significant military power.

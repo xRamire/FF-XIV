@@ -11,7 +11,7 @@ const RealmRebornLocation1 = ({ setKey }) => {
             animate={{ opacity: 1, transition: { duration: 1 } }}
             exit={{ display: 'none', opacity: 0, transition: { duration: 0.3 } }}
         >
-            <article className='content-article padd-m-t-25'>
+            <article className='content-article'>
                 <h3>UL'DAH</h3>
                 <p>
                     The bustling commercial hub of Ul'dah sits amid the desolate desert landscape of southern Aldenard. The city is organized strategically around the dome-shaped citadel at its center. Its towering fortifications and protective outer walls are visible for malms in all directions, and serve as a stark deterrent to would-be besiegers.

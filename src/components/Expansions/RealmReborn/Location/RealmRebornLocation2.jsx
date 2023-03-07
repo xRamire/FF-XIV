@@ -11,7 +11,7 @@ const RealmRebornLocation2 = ({ setKey }) => {
             animate={{ opacity: 1, transition: { duration: 1 } }}
             exit={{ display: 'none', opacity: 0, transition: { duration: 0.3 } }}
         >
-            <article className='content-article padd-m-t-25'>
+            <article className='content-article'>
                 <h3>GRIDANIA</h3>
                 <p>
                     In the eastern reaches of the Aldenard landmass, home to vast, dense woodlands and coursing rivers, lies the forest nation of Gridania. The cityscape is a mosaic of labyrinthine waterways and great wooden structures, so gracefully constructed they seem a part of the surrounding environment.

@@ -74,7 +74,7 @@
     margin: 0px;
 }
 
-.story {
+.component-container {
     max-width: 80vw;
     width: 90%;
 
@@ -103,6 +103,10 @@
     justify-content: space-evenly;
     border-radius: 50px;
     background-color: #fff;
+}
+
+.content {
+    height: 100%;
 }
 
 .content-article {
@@ -181,7 +185,7 @@
 
 @media only screen and (max-width: 600px) {
 
-    .story {
+    .component-container {
         flex-direction: column;
     }
 
@@ -198,8 +202,32 @@
         display: flex;
         width: 100%;
         justify-content: space-around;
-        padding-bottom: 25px;
+        position: absolute;
+        bottom: 5%;
     }
+
+    #expansion-component .bg2 {
+        flex-direction: column;
+        max-height: 45vh;
+        bottom: 29%;
+    }
+
+    .contentComponent {
+        flex-direction: column;
+    }
+
+    .content-article-img {
+        max-width: 150px;
+    }
+
+    .content-article h3 {
+        margin-top: 0;
+    }
+
+    .content-article p {
+        max-height: 25vh;
+    }
+
 
 
 }

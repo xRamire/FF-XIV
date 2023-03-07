@@ -24,9 +24,9 @@ const RealmRebornRace3 = ({ setKey }) => {
             animate={{ y: 0, opacity: 1, transition: { duration: 1 } }}
             exit={{ y: '+100%', opacity: 1, transition: { duration: 1 } }}
         >
-            <article className='content-article race-article padd-m-t-25'>
+            <article className='content-article race-article'>
                 <div className='race-title'>
-                    <div><h2 className='race-name'>ELEZEN</h2></div>
+                    <div className='race-name'><h2>ELEZEN</h2><span>3 of 5</span></div>
                     <div>
                         <p className='auto padd-0'>
                             The Elezen are a characteristically tall people, long of limb and slender of build. They are also possessed of a somewhat extended lifespan in comparison to the Hyur. The Elezen once claimed sole dominion over Eorzea, their presence predating that of the other races, and, as such, developed a heightened sense of honor and pride. In years past, the Hyur migration into Elezen lands sparked bitter conflict. At present, however, the mutual understanding reached between the two races allows them to work towards mutual peace and prosperity.
@@ -35,11 +35,11 @@ const RealmRebornRace3 = ({ setKey }) => {
                 </div>
                 <div className='race-types'>
                     <div className='race-types-content'>
-                        <motion.div animate={{ opacity: raceType === 1 ? 1 : 0.3, transition: { duration: 0.3 } }} className="race-img race-img1">
-                            <img style={{ 'width': '12vh' }} className='img1' src={RaceImg1} alt="WILDWOOD" />
-                            <img style={{ 'width': '12vh' }} className='img2' src={RaceImg2} alt="WILDWOOD" />
+                        <motion.div animate={{ opacity: raceType === 1 ? 1 : 0.3, transition: { duration: 0.3 } }} className="race-img race-img1 nomob">
+                            <img onClick={() => { setRaceType(1) }} style={{ 'width': '12vh' }} className='img1' src={RaceImg1} alt="WILDWOOD" />
+                            <img onClick={() => { setRaceType(1) }} style={{ 'width': '12vh' }} className='img2' src={RaceImg2} alt="WILDWOOD" />
                         </motion.div>
-                        <div>
+                        <div className='races-fix-mobile'>
                             <div className='race-types-names auto'>
                                 <motion.h3 onClick={() => { setRaceType(1) }} animate={{ opacity: raceType === 1 ? 1 : 0.5, transition: { duration: 0.3 } }}>WILDWOOD</motion.h3>
                                 <motion.h3 onClick={() => { setRaceType(2) }} animate={{ opacity: raceType === 2 ? 1 : 0.5, transition: { duration: 0.3 } }}>DUSKWIGHT</motion.h3>
@@ -54,10 +54,20 @@ const RealmRebornRace3 = ({ setKey }) => {
                             </div>
 
                         </div>
-                        <motion.div animate={{ opacity: raceType === 2 ? 1 : 0.3, transition: { duration: 0.3 } }} className="race-img race-img2">
-                            <img style={{ 'width': '15vh' }} className='img1' src={RaceImg3} alt="DUSKWIGHT" />
-                            <img style={{ 'width': '11vh' }} className='img2' src={RaceImg4} alt="DUSKWIGHT" />
+                        <motion.div animate={{ opacity: raceType === 2 ? 1 : 0.3, transition: { duration: 0.3 } }} className="race-img race-img2 nomob">
+                            <img onClick={() => { setRaceType(2) }} style={{ 'width': '15vh' }} className='img1' src={RaceImg3} alt="DUSKWIGHT" />
+                            <img onClick={() => { setRaceType(2) }} style={{ 'width': '11vh' }} className='img2' src={RaceImg4} alt="DUSKWIGHT" />
                         </motion.div>
+
+                        {/* mobile */}
+                        {/* <motion.div animate={{ display: raceType === 1 ? 'flex' : 'none', opacity: raceType === 1 ? 1 : 0, transition: { duration: 0.3 } }} className="race-img-mob nodesk">
+                            <img onClick={() => { setRaceType(1) }} className='img1' src={RaceImg1} alt="WILDWOOD" />
+                            <img onClick={() => { setRaceType(1) }} className='img2' src={RaceImg2} alt="WILDWOOD" />
+                        </motion.div>
+                        <motion.div animate={{ display: raceType === 2 ? 'flex' : 'none', opacity: raceType === 2 ? 1 : 0, transition: { duration: 0.3 } }} className="race-img-mob nodesk">
+                            <img onClick={() => { setRaceType(2) }} className='img1' src={RaceImg3} alt="DUSKWIGHT" />
+                            <img onClick={() => { setRaceType(2) }} className='img2' src={RaceImg4} alt="DUSKWIGHT" />
+                        </motion.div> */}
                     </div>
                 </div>
             </article>

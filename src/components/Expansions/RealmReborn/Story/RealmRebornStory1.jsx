@@ -12,7 +12,7 @@ const RealmRebornStory1 = ({ setKey }) => {
             animate={{ opacity: 1, transition: { duration: 1 } }}
             exit={{ display: 'none', opacity: 0, transition: { duration: 0.3 } }}
         >
-            <article className='content-article padd-m-t-25'>
+            <article className='content-article'>
                 <h3>The Crystal's Call</h3>
                 <p>
                     Hydaelyn─a vibrant planet blessed by the Light of the Crystal.

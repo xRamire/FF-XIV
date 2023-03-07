@@ -11,7 +11,7 @@ const RealmRebornLocation3 = ({ setKey }) => {
             animate={{ opacity: 1, transition: { duration: 1 } }}
             exit={{ display: 'none', opacity: 0, transition: { duration: 0.3 } }}
         >
-            <article className='content-article padd-m-t-25'>
+            <article className='content-article'>
                 <h3>LIMSA LOMINSA</h3>
                 <p>
                     On the southern coast of the island of Vylbrand, under the shadow of ancient cliffs worn by the relentless onslaught of the Rhotano Sea, lies the marine city-state of Limsa Lominsa. Said to be blessed by the goddess of navigation, Llymlaen, the city is spread out over countless tiny islands, each connected by sturdy bridges of iron and wood construction, earning her the name the "Navigator's Veil" from traveling bards who have witnessed the city's beauty from afar.

@@ -5,7 +5,7 @@ import PreludeDiscoveries from '../../assets/sounds/ff-XIV-prelude-discoveries.m
 
 function BgSound({ handleSongLoading, handleSongPlaying, handleSongFinishedPlaying }) {
 
-    const [isPlaying, setIsPlaying] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(false);
 
     return (
         <div>

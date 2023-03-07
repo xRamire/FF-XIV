@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence, useScroll } from "framer-motion";
 import './expansions.css';
 import DebounceFunction from '../DebounceFunction'
+import { expansions } from '../../expansions';
 
 import MainImg from '../../assets/img/realmreborn-logo.png';
 
@@ -125,14 +126,40 @@ const RealmReborn = () => {
     let setKey = 50
 
 
+    const handleLastSectionBtn = () => {
+
+        if (showStory && (currentStory > 1)) {
+            setCurrentStory(currentStory - 1)
+        }
+
+        if (showLocation && (currentLocation > 1)) {
+            setCurrentLocation(currentLocation - 1)
+        }
+
+    }
+
+    const handleNextSectionBtn = () => {
+
+        if (showStory && (currentStory < storyPosts)) {
+            setCurrentStory(currentStory + 1)
+        }
+
+        if (showLocation && (currentLocation < locationPosts)) {
+            console.log('asd')
+            setCurrentLocation(currentLocation + 1)
+        }
+
+    }
+
+
     return (
-        <motion.div id='expansion-component' className='landing relative exp-realmreborn bg0 lock-scroll'
+        <motion.div id='expansion-component' className='landing relative exp-realmreborn bg0 lock-scroll '
             initial={{ opacity: 0, transition: { duration: 0.5 } }}
             animate={{ opacity: 1, transition: { duration: 1 } }}
             exit={{ opacity: 0, transition: { duration: 0.3 } }}>
 
-            <div className="container auto bg1">
-                <div className="content">
+            <div className="container auto bg1 unlock-scroll-small">
+                <div className="content ">
                     <div className="particles">
                         <ParticleBackground settings={settings} />
                     </div>
@@ -153,8 +180,8 @@ const RealmReborn = () => {
             <motion.div
                 initial={{ y: blockAnimation + '%', transition: { duration: 0 } }}
                 animate={{ y: showStory ? '0' : '+' + blockAnimation + '%', transition: { duration: 1 } }}
-                className="container auto bg2" id='story'>
-                <div className="content story auto">
+                className="container auto bg2">
+                <div className="content component-container auto">
                     <div onMouseEnter={handleMouseEnterL} onMouseLeave={handleMouseLeaveL} className="nomob carrousel-btn carrousel-btn-2" onClick={() => currentStory === 1 ? null : setCurrentStory(currentStory - 1)} style={currentStory === 1 ? { opacity: "0.5" } : { opacity: "1" }}>
                         <svg style={{ fill: isHoveringL && currentStory !== 1 ? '#0083ab' : null }} xmlns="http://www.w3.org/2000/svg" width="11" height="20"><path fill-rule="evenodd" d="M.366 19.708c.405.39 1.06.39 1.464 0l8.563-8.264a1.95 1.95 0 0 0 0-2.827L1.768.292A1.063 1.063 0 0 0 .314.282a.976.976 0 0 0-.011 1.425l7.894 7.617a.975.975 0 0 1 0 1.414L.366 18.295a.974.974 0 0 0 0 1.413" /></svg>
                     </div>
@@ -170,14 +197,7 @@ const RealmReborn = () => {
                         <svg style={{ fill: isHoveringR && currentStory !== storyPosts ? '#0083ab' : null }} xmlns="http://www.w3.org/2000/svg" width="11" height="20"><path fill-rule="evenodd" d="M.366 19.708c.405.39 1.06.39 1.464 0l8.563-8.264a1.95 1.95 0 0 0 0-2.827L1.768.292A1.063 1.063 0 0 0 .314.282a.976.976 0 0 0-.011 1.425l7.894 7.617a.975.975 0 0 1 0 1.414L.366 18.295a.974.974 0 0 0 0 1.413" /></svg>
                     </div>
 
-                    <div className="carrousel-btn-mob nodesk">
-                        <div className="carrousel-btn carrousel-btn-1" onClick={() => currentStory === 1 ? null : setCurrentStory(currentStory - 1)} style={currentStory === 1 ? { opacity: "0.5" } : { opacity: "1" }}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><polygon points="13.707 4.707 12.293 3.293 3.586 12 12.293 20.707 13.707 19.293 6.414 12 13.707 4.707" /><polygon points="19.707 4.707 18.293 3.293 9.586 12 18.293 20.707 19.707 19.293 12.414 12 19.707 4.707" /></g></svg>
-                        </div>
-                        <div className="carrousel-btn carrousel-btn-2" onClick={() => currentStory === storyPosts ? null : setCurrentStory(currentStory + 1)} style={currentStory === storyPosts ? { opacity: "0.5" } : { opacity: "1" }} >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><polygon points="13.707 4.707 12.293 3.293 3.586 12 12.293 20.707 13.707 19.293 6.414 12 13.707 4.707" /><polygon points="19.707 4.707 18.293 3.293 9.586 12 18.293 20.707 19.707 19.293 12.414 12 19.707 4.707" /></g></svg>
-                        </div>
-                    </div>
+
 
                 </div>
             </motion.div>
@@ -186,8 +206,8 @@ const RealmReborn = () => {
             <motion.div
                 initial={{ y: blockAnimation + '%', transition: { duration: 0 } }}
                 animate={{ y: showLocation ? '0' : blockAnimation + '%', transition: { duration: 1 } }}
-                className="container auto bg2" id='story'>
-                <div className="content story auto">
+                className="container auto bg2">
+                <div className="content component-container auto">
                     <div onMouseEnter={handleMouseEnterL} onMouseLeave={handleMouseLeaveL} className="nomob carrousel-btn carrousel-btn-2" onClick={() => currentLocation === 1 ? null : setCurrentLocation(currentLocation - 1)} style={currentLocation === 1 ? { opacity: "0.5" } : { opacity: "1" }}>
                         <svg style={{ fill: isHoveringL && currentLocation !== 1 ? '#0083ab' : null }} xmlns="http://www.w3.org/2000/svg" width="11" height="20"><path fill-rule="evenodd" d="M.366 19.708c.405.39 1.06.39 1.464 0l8.563-8.264a1.95 1.95 0 0 0 0-2.827L1.768.292A1.063 1.063 0 0 0 .314.282a.976.976 0 0 0-.011 1.425l7.894 7.617a.975.975 0 0 1 0 1.414L.366 18.295a.974.974 0 0 0 0 1.413" /></svg>
                     </div>
@@ -205,18 +225,10 @@ const RealmReborn = () => {
                         <svg style={{ fill: isHoveringR && currentLocation !== locationPosts ? '#0083ab' : null }} xmlns="http://www.w3.org/2000/svg" width="11" height="20"><path fill-rule="evenodd" d="M.366 19.708c.405.39 1.06.39 1.464 0l8.563-8.264a1.95 1.95 0 0 0 0-2.827L1.768.292A1.063 1.063 0 0 0 .314.282a.976.976 0 0 0-.011 1.425l7.894 7.617a.975.975 0 0 1 0 1.414L.366 18.295a.974.974 0 0 0 0 1.413" /></svg>
                     </div>
 
-                    <div className="carrousel-btn-mob nodesk">
-                        <div className="carrousel-btn carrousel-btn-1" onClick={() => currentLocation === 1 ? null : setCurrentLocation(currentLocation - 1)} style={currentLocation === 1 ? { opacity: "0.5" } : { opacity: "1" }}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><polygon points="13.707 4.707 12.293 3.293 3.586 12 12.293 20.707 13.707 19.293 6.414 12 13.707 4.707" /><polygon points="19.707 4.707 18.293 3.293 9.586 12 18.293 20.707 19.707 19.293 12.414 12 19.707 4.707" /></g></svg>
-                        </div>
-                        <div className="carrousel-btn carrousel-btn-2" onClick={() => currentLocation === locationPosts ? null : setCurrentLocation(currentLocation + 1)} style={currentLocation === locationPosts ? { opacity: "0.5" } : { opacity: "1" }} >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><polygon points="13.707 4.707 12.293 3.293 3.586 12 12.293 20.707 13.707 19.293 6.414 12 13.707 4.707" /><polygon points="19.707 4.707 18.293 3.293 9.586 12 18.293 20.707 19.707 19.293 12.414 12 19.707 4.707" /></g></svg>
-                        </div>
-                    </div>
-
                 </div>
             </motion.div>
 
+            {/* ----RACES---- */}
             <motion.div
                 onWheel={debouncedScrollPosition}
                 initial={{ y: blockAnimation + '%', transition: { duration: 0 } }}
@@ -232,6 +244,18 @@ const RealmReborn = () => {
                     </AnimatePresence>
                 </div>
             </motion.div>
+
+
+            <div className='nodesk'>
+                <motion.div animate={{ display: showStory || showLocation ? 'flex' : 'none', transition: { duration: 0.3 } }} className="carrousel-btn-mob ">
+                    <div className="carrousel-btn carrousel-btn-1" onClick={() => handleLastSectionBtn()} style={(showStory && (currentStory === 1)) || (showLocation && (currentLocation === 1)) ? { opacity: "0.5" } : { opacity: "1" }}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><polygon points="13.707 4.707 12.293 3.293 3.586 12 12.293 20.707 13.707 19.293 6.414 12 13.707 4.707" /><polygon points="19.707 4.707 18.293 3.293 9.586 12 18.293 20.707 19.707 19.293 12.414 12 19.707 4.707" /></g></svg>
+                    </div>
+                    <div className="carrousel-btn carrousel-btn-2" onClick={() => handleNextSectionBtn()} style={(showStory && (currentStory === storyPosts)) || (showLocation && (currentLocation === locationPosts)) ? { opacity: "0.5" } : { opacity: "1" }} >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><polygon points="13.707 4.707 12.293 3.293 3.586 12 12.293 20.707 13.707 19.293 6.414 12 13.707 4.707" /><polygon points="19.707 4.707 18.293 3.293 9.586 12 18.293 20.707 19.707 19.293 12.414 12 19.707 4.707" /></g></svg>
+                    </div>
+                </motion.div>
+            </div>
         </motion.div>
     );
 }

@@ -11,7 +11,7 @@ const RealmRebornLocation4 = ({ setKey }) => {
             animate={{ opacity: 1, transition: { duration: 1 } }}
             exit={{ display: 'none', opacity: 0, transition: { duration: 0.3 } }}
         >
-            <article className='content-article padd-m-t-25'>
+            <article className='content-article'>
                 <h3>MOR DHONA</h3>
                 <p>
                     Mor Dhona is an inland region of Eorzea, and the site of the first aerial battle in recorded history—a conflict that took place above Silvertear Lake.

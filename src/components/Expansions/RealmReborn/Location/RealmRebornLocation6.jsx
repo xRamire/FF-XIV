@@ -11,7 +11,7 @@ const RealmRebornLocation6 = ({ setKey }) => {
             animate={{ opacity: 1, transition: { duration: 1 } }}
             exit={{ display: 'none', opacity: 0, transition: { duration: 0.3 } }}
         >
-            <article className='content-article padd-m-t-25'>
+            <article className='content-article'>
                 <h3>ISHGARD</h3>
                 <p>
                     In the central region of Abalathia's Spine, that great mountain range that spans Aldenard from east to west, can be found the forbidding highlands of Coerthas and the Holy See of Ishgard. The archbishop of the church, while leading his people in the teachings of Halone, the Fury, rules also as the nation's sovereign.

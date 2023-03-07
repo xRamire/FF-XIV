@@ -12,7 +12,7 @@ const RealmRebornStory4 = ({ setKey }) => {
             animate={{ opacity: 1, transition: { duration: 1 } }}
             exit={{ display: 'none', opacity: 0, transition: { duration: 0.3 } }}
         >
-            <article className='content-article padd-m-t-25'>
+            <article className='content-article'>
                 <h3>Adventurers</h3>
                 <p>
                     The life of an adventurer is the pursuit of fortune and the pursuit of fame. It is the devotion of oneself to seeking out danger and glory wherever they might lie. It is an endless quest taken up only by the most intrepid and dauntless of souls.

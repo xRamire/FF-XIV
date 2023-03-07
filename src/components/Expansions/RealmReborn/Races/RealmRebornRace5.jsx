@@ -24,20 +24,20 @@ const RealmRebornRace5 = ({ setKey }) => {
             animate={{ y: 0, opacity: 1, transition: { duration: 1 } }}
             exit={{ y: '+100%', opacity: 1, transition: { duration: 1 } }}
         >
-            <article className='content-article race-article padd-m-t-25'>
+            <article className='content-article race-article'>
                 <div className='race-title'>
-                    <div><h2 className='race-name'>LALAFELL</h2></div>
+                    <div className='race-name'><h2>LALAFELL</h2><span>5 of 5</span></div>
                     <div>
                         <p className='auto padd-0'>The Lalafell are a folk both rotund and diminutive. Small by any race's standards and possessed of a childlike countenance, it proves difficult for non-Lalafell to gauge an individual's age with any degree of accuracy. Originally an agricultural people inhabiting the fertile islands of the south seas, they found their way to Eorzea via the burgeoning trade routes. Lalafell are welcoming of outsiders, and share prosperous relations with all of the other races of Eorzea.</p>
                     </div>
                 </div>
                 <div className='race-types'>
                     <div className='race-types-content'>
-                        <motion.div animate={{ opacity: raceType === 1 ? 1 : 0.3, transition: { duration: 0.3 } }} className="race-img race-img1">
-                            <img className='img1' src={RaceImg1} alt="PLAINSFOLK" />
-                            <img className='img2' src={RaceImg2} alt="PLAINSFOLK" />
+                        <motion.div animate={{ opacity: raceType === 1 ? 1 : 0.3, transition: { duration: 0.3 } }} className="race-img race-img1 nomob">
+                            <img onClick={() => { setRaceType(1) }} style={{ 'width': '18vh' }} className='img1' src={RaceImg1} alt="PLAINSFOLK" />
+                            <img onClick={() => { setRaceType(1) }} style={{ 'width': '18vh' }} className='img2' src={RaceImg2} alt="PLAINSFOLK" />
                         </motion.div>
-                        <div>
+                        <div className='races-fix-mobile'>
                             <div className='race-types-names auto'>
                                 <motion.h3 onClick={() => { setRaceType(1) }} animate={{ opacity: raceType === 1 ? 1 : 0.5, transition: { duration: 0.3 } }}>PLAINSFOLK</motion.h3>
                                 <motion.h3 onClick={() => { setRaceType(2) }} animate={{ opacity: raceType === 2 ? 1 : 0.5, transition: { duration: 0.3 } }}>DUNESFOLK</motion.h3>
@@ -52,10 +52,20 @@ const RealmRebornRace5 = ({ setKey }) => {
                             </div>
 
                         </div>
-                        <motion.div animate={{ opacity: raceType === 2 ? 1 : 0.3, transition: { duration: 0.3 } }} className="race-img race-img2">
-                            <img className='img1' src={RaceImg3} alt="DUNESFOLK" />
-                            <img className='img2' src={RaceImg4} alt="DUNESFOLK" />
+                        <motion.div animate={{ opacity: raceType === 2 ? 1 : 0.3, transition: { duration: 0.3 } }} className="race-img race-img2 nomob">
+                            <img onClick={() => { setRaceType(2) }} className='img1' src={RaceImg3} alt="DUNESFOLK" />
+                            <img onClick={() => { setRaceType(2) }} className='img2' src={RaceImg4} alt="DUNESFOLK" />
                         </motion.div>
+
+                        {/* mobile */}
+                        {/* <motion.div animate={{ display: raceType === 1 ? 'flex' : 'none', opacity: raceType === 1 ? 1 : 0, transition: { duration: 0.3 } }} className="race-img-mob nodesk">
+                            <img onClick={() => { setRaceType(1) }} className='img1' src={RaceImg1} alt="PLAINSFOLK" />
+                            <img onClick={() => { setRaceType(1) }} className='img2' src={RaceImg2} alt="PLAINSFOLK" />
+                        </motion.div>
+                        <motion.div animate={{ display: raceType === 2 ? 'flex' : 'none', opacity: raceType === 2 ? 1 : 0, transition: { duration: 0.3 } }} className="race-img-mob nodesk">
+                            <img onClick={() => { setRaceType(2) }} className='img1' src={RaceImg3} alt="DUNESFOLK" />
+                            <img onClick={() => { setRaceType(2) }} className='img2' src={RaceImg4} alt="DUNESFOLK" />
+                        </motion.div> */}
                     </div>
                 </div>
             </article>

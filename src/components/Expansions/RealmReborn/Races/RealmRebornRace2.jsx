@@ -23,20 +23,20 @@ const RealmRebornRace2 = ({ setKey }) => {
             animate={{ y: 0, opacity: 1, transition: { duration: 1 } }}
             exit={{ y: '+100%', opacity: 1, transition: { duration: 1 } }}
         >
-            <article className='content-article race-article padd-m-t-25'>
+            <article className='content-article race-article'>
                 <div className='race-title'>
-                    <div><h2 className='race-name'>MIQO'TE</h2></div>
+                    <div className='race-name'><h2>MIQO'TE</h2><span>2 of 5</span></div>
                     <div>
                         <p className='auto padd-0'>Though their presence in Eorzea is lesser than that of the other races, the Miqo'te are easily distinguished by their large, projecting ears and restless, feline tails. The ancestors of this line first made their way to the realm during the Age of Endless Frost in the Fifth Umbral Era, traversing frozen seas in pursuit of the wildlife upon which they subsisted. Instinctual territoriality causes many among them to lead solitary lifestyles. Males in particular are said to shy from contact with others.</p>
                     </div>
                 </div>
                 <div className='race-types'>
                     <div className='race-types-content'>
-                        <motion.div animate={{ opacity: raceType === 1 ? 1 : 0.3, transition: { duration: 0.3 } }} className="race-img race-img1">
-                            <img style={{ 'width': '18vh' }} className='img1' src={RaceImg1} alt="SEEKERS OF THE SUN" />
-                            <img style={{ 'width': '18vh' }} className='img2' src={RaceImg2} alt="SEEKERS OF THE SUN" />
+                        <motion.div animate={{ opacity: raceType === 1 ? 1 : 0.3, transition: { duration: 0.3 } }} className="race-img race-img1 nomob">
+                            <img onClick={() => { setRaceType(1) }} style={{ 'width': '18vh' }} className='img1' src={RaceImg1} alt="SEEKERS OF THE SUN" />
+                            <img onClick={() => { setRaceType(1) }} style={{ 'width': '18vh' }} className='img2' src={RaceImg2} alt="SEEKERS OF THE SUN" />
                         </motion.div>
-                        <div>
+                        <div className='races-fix-mobile'>
                             <div className='race-types-names auto'>
                                 <motion.h3 onClick={() => { setRaceType(1) }} animate={{ opacity: raceType === 1 ? 1 : 0.5, transition: { duration: 0.3 } }}>SEEKERS OF THE SUN</motion.h3>
                                 <motion.h3 onClick={() => { setRaceType(2) }} animate={{ opacity: raceType === 2 ? 1 : 0.5, transition: { duration: 0.3 } }}>KEEPERS OF THE MOON</motion.h3>
@@ -51,10 +51,21 @@ const RealmRebornRace2 = ({ setKey }) => {
                             </div>
 
                         </div>
-                        <motion.div animate={{ opacity: raceType === 2 ? 1 : 0.3, transition: { duration: 0.3 } }} className="race-img race-img2">
-                            <img className='img1' src={RaceImg3} alt="KEEPERS OF THE MOON" />
-                            <img style={{ 'width': '14vh' }} className='img2' src={RaceImg4} alt="KEEPERS OF THE MOON" />
+                        <motion.div animate={{ opacity: raceType === 2 ? 1 : 0.3, transition: { duration: 0.3 } }} className="race-img race-img2 nomob">
+                            <img onClick={() => { setRaceType(2) }} className='img1' src={RaceImg3} alt="KEEPERS OF THE MOON" />
+                            <img onClick={() => { setRaceType(2) }} style={{ 'width': '14vh' }} className='img2' src={RaceImg4} alt="KEEPERS OF THE MOON" />
                         </motion.div>
+
+
+                        {/* mobile */}
+                        {/* <motion.div animate={{ display: raceType === 1 ? 'flex' : 'none', opacity: raceType === 1 ? 1 : 0, transition: { duration: 0.3 } }} className="race-img-mob nodesk">
+                            <img onClick={() => { setRaceType(1) }} className='img1' src={RaceImg1} alt="SEEKERS OF THE SUN" />
+                            <img onClick={() => { setRaceType(1) }} className='img2' src={RaceImg2} alt="SEEKERS OF THE SUN" />
+                        </motion.div>
+                        <motion.div animate={{ display: raceType === 2 ? 'flex' : 'none', opacity: raceType === 2 ? 1 : 0, transition: { duration: 0.3 } }} className="race-img-mob nodesk">
+                            <img onClick={() => { setRaceType(2) }} className='img1' src={RaceImg3} alt="KEEPERS OF THE MOON" />
+                            <img onClick={() => { setRaceType(2) }} className='img2' src={RaceImg4} alt="KEEPERS OF THE MOON" />
+                        </motion.div> */}
                     </div>
                 </div>
             </article>

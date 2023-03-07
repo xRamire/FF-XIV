@@ -12,7 +12,7 @@ const RealmRebornStory3 = ({ setKey }) => {
             animate={{ opacity: 1, transition: { duration: 1 } }}
             exit={{ display: 'none', opacity: 0, transition: { duration: 0.3 } }}
         >
-            <article className='content-article padd-m-t-25'>
+            <article className='content-article'>
                 <h3>Eorzea</h3>
                 <p>
                     Comprised of Aldenard, the westernmost of the Three Great Continents, and its surrounding islands, the realm of Eorzea has been the cradle of several unique civilizations throughout history.
