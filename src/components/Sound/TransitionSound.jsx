@@ -3,7 +3,7 @@ import Sound from 'react-sound';
 import PreludeDiscoveries from '../../assets/sounds/effecto-transicion.wav';
 
 
-function TransitionSound({ handleSongLoading, handleSongPlaying, handleSongFinishedPlaying }) {
+function TransitionSound({ }) {
 
     const [isPlaying, setIsPlaying] = useState(true);
 
@@ -13,9 +13,6 @@ function TransitionSound({ handleSongLoading, handleSongPlaying, handleSongFinis
             url={PreludeDiscoveries}
             volume={40}
             playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.STOPPED}
-            onLoading={handleSongLoading}
-            onPlaying={handleSongPlaying}
-            onFinishedPlaying={handleSongFinishedPlaying}
         />
 
     );

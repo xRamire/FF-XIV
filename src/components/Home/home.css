@@ -1,4 +1,13 @@
-#home .bg1 {
+#homeCover {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+#homeCover .bg-cover {
     background-image: url(../../assets/img/sky.jpeg);
     background-size: cover;
     background-position: center;
@@ -7,6 +16,16 @@
     width: 100%;
     max-width: 100%;
     height: 100vh;
+}
+
+#homeCover .main-img {
+    width: 100%;
+    max-width: 650px;
+}
+
+#home .homeVideo video {
+    width: 100%;
+    height: 100%;
 }
 
 #home .bg2 {
@@ -18,15 +37,7 @@
     width: 100%;
     max-width: 100%;
     height: 100vh;
-}
-
-#home .main-img {
-    width: 100%;
-    max-width: 650px;
-}
-
-#home .main-img img {
-    width: 100%;
+    margin-top: -5px;
 }
 
 #home .txt h1 {

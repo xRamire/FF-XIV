@@ -6,7 +6,7 @@ import Home from './Home/Home';
 import { AnimatePresence } from 'framer-motion';
 import Heavensward from './Expansions/Heavensward';
 
-function AnimatedRoutes() {
+function AnimatedRoutes({ coverHidden, setCoverHidden }) {
 
     const location = useLocation();
 
@@ -15,7 +15,7 @@ function AnimatedRoutes() {
     return (
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home coverHidden={coverHidden} setCoverHidden={setCoverHidden} />} />
                 <Route path="/realm-reborn" element={<RealmReborn />} />
                 <Route path="/heavensward" element={<Heavensward />} />
             </Routes>
