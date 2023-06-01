@@ -9,9 +9,7 @@
 
 #homeCover .bg-cover {
     background-image: url(../../assets/img/sky.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
     padding: 0px;
     width: 100%;
     max-width: 100%;
@@ -28,11 +26,8 @@
     height: 100%;
 }
 
-#home .bg2 {
-    background-image: url(../../assets/img/dark-bg.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+#home .bg1 {
+    background-image: url(../../assets/img/light-bg.jpg);
     padding: 0px;
     width: 100%;
     max-width: 100%;
@@ -40,10 +35,27 @@
     margin-top: -5px;
 }
 
+#home .bg2 {
+    background-image: url(../../assets/img/dark-bg.jpeg);
+    padding: 0px;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    margin-top: -5px;
+}
+
+
 #home .txt h1 {
     filter: drop-shadow(2px 4px 6px black);
 }
 
+#home .character {
+    max-width: 500px;
+}
+
+#home .character2 {
+    max-width: 400px;
+}
 
 
 /* arrow start */

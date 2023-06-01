@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 
 import './home.css';
 import MainImg from '../../assets/img/Final-Fantasy-XIV-home-Logo.png';
+import DragoonWarrior from '../../assets/img/dragoon-warrior.png';
+import SkyStar from '../../assets/img/skystar.png';
 import homeVideo from '../../assets/img/homeVideo.mp4'
 
 import { Link } from 'react-router-dom';
@@ -32,7 +34,7 @@ function Cover({ coverHidden, setCoverHidden }) {
             transition={{ duration: 1 }}
         >
 
-            <div className="container auto bg-cover">
+            <div className="container auto bg-cover wbg">
                 <div className="content">
                     <div className="main-img auto padd-t-100">
                         <img src={MainImg} alt="Final Fantasy" />
@@ -65,7 +67,24 @@ function Home({ coverHidden, setCoverHidden }) {
                     <video autoPlay loop muted src={homeVideo}></video>
                 </div>
 
-                <div className="container auto bg2" id='expansions'>
+                <div className="container auto bg1 wbg">
+                    <div className="content  relative">
+                        <div className="row verticalalign">
+                            <div className="column">
+                                <div>
+                                    <img className='character' src={DragoonWarrior} alt="Dragoon" />
+                                </div>
+                            </div>
+                            <div className="column">
+                                <div>
+                                    <img className='character character2' src={SkyStar} alt="Skystar" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="container auto bg2 wbg" id='expansions'>
                     <div className="content verticalalign">
                         <div className="column verticalalign">
                             <div className="row card-space auto padd-m-t-50">
