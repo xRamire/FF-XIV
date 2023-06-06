@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap');
 
 * {
@@ -122,6 +126,7 @@ a {
 
 .padd-t-75 {
     padding-top: 75px;
+
 }
 
 .padd-t-100 {
