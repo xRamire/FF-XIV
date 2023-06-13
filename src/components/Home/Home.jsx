@@ -142,7 +142,7 @@ function Home({ coverHidden, setCoverHidden }) {
                         >
                             <TitleText title={<>Discover FFXIV</>} />
                             <div className="mt-[31px] flex flex-col gap-[24px]">
-                                <p className='flex font-normal text-[18px] text-[#333333] leading-[32px] mx-0'>
+                                <p className='flex font-normal text-[18px] text-[#333333] leading-[32px] mx-auto'>
                                     Soon
 
                                 </p>
