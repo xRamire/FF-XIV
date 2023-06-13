@@ -20,7 +20,7 @@ function BgSound({ coverHidden }) {
             </div>
             <Sound
                 url={PreludeDiscoveries}
-                volume={0}
+                volume={40}
                 playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.STOPPED}
             />
         </div>

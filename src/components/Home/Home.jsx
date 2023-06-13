@@ -141,6 +141,12 @@ function Home({ coverHidden, setCoverHidden }) {
                             className="flex-[0.75] flex justify-center flex-col text-center"
                         >
                             <TitleText title={<>Discover FFXIV</>} />
+                            <div className="mt-[31px] flex flex-col gap-[24px]">
+                                <p className='flex font-normal text-[18px] text-[#333333] leading-[32px] mx-0'>
+                                    Soon
+
+                                </p>
+                            </div>
                         </motion.div>
 
                         <svg version="1.1" id="line-ffxiv" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 485 5.9" >
